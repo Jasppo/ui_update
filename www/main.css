@@ -1,0 +1,391 @@
+/* Navbar ------------------------------------------------------------------ */
+
+/* Navbar background color */
+.navbar.navbar-inverse {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Makes CCB Title in Navbar larger */
+.navbar {
+  --bs-navbar-brand-font-size: 1.7rem;
+}
+
+
+/* Sidebar ----------------------------------------------------------------- */
+
+#sidebar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: all 0.3s ease; /* Smooth animations */
+}
+
+/* Show Tab Information, Download Buttons */
+button#clipbtn,
+button#myTabInfo,
+a#myDataDownload,
+a#myChartDownload {
+  background-color: #004c4c;
+  color: white;
+}
+
+
+
+.tabbable > .nav {
+  margin-bottom: 30px; /* Adds margin below sub navigation list */
+}
+
+
+/* ggplot Dynamic resizing --------------------------------------------------- */
+
+.shiny-plot-output {
+  height: 80vh !important;
+}
+
+.shiny-plot-output > img {
+  height: 100% !important;
+}
+
+
+/* Subtabs style ----------------------------------------------------------- */
+
+.tabbable > ul > li > a.nav-link.active {
+  background-color: #D8DFE5;
+  border-color: #D8DFE5;
+  color: #155b5b;
+}
+
+.tabbable > ul > li > a.nav-link {
+  color: #155b5b;
+}
+
+/* Homepage - Hero image =============================================================================================================================== */
+.hero-wrapper {
+  /* layout */
+  height: 96vh;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin: -1.5rem;
+}
+
+.hero-image {
+  /* layout */
+  height: 96vh;;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* content styling OPTIONAL*/
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5vh;
+  /* background styling */
+  background-image: url("heroImage-color2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Text */
+.hero-text {
+  color: #464646;
+  border-bottom: 3px solid #292929;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+
+
+/* CCB Preview  --------------------------------------------------------------------------------------------------------------- */
+
+.ccb_preview {
+  border: 2px solid #222222;
+  width: 60%;
+  background: white;
+  border-radius: 0;
+  margin-bottom: 5vh;
+}
+
+/* Removes padding in the body of the card */
+.ccb_preview > .card-body {
+  padding: 0;
+}
+
+/* By default bs_gutter_x is set to 1.5 rem, which caused overflow of content hence scrollbar. This fixes that */ 
+.ccb_preview .card-body .row {
+    --bs-gutter-x: 0;
+}
+
+/* Card Header ----------------------------------------------- */
+.ccb_preview .card-header {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: #40327b;
+}
+
+/* Vertical Menu ----------------------------------------------- */
+
+ul#anatomy_menu_input.nav-pills {
+    --bs-nav-pills-border-radius: unset;
+    --bs-nav-pills-link-active-color: #fff;
+    --bs-nav-link-color: #000;
+    --bs-nav-link-hover-color: #fff;
+    background: linear-gradient(to right, #e5e1d9, #e5e1d9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 100%;
+    transition: width 0.5s;
+}
+
+ul#anatomy_menu_input.nav-pills > li > a {
+    padding: 15px;
+    transition: background-color 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+ul#anatomy_menu_input.nav-pills > li > a:last-child {
+  border-bottom: none; /* Ensures no border is added to the bottom of the last item in the menu */
+}
+
+ul#anatomy_menu_input.nav-pills > li > a:hover {
+  background-color: #9E8DE3;
+  color: white;
+}
+
+ul#anatomy_menu_input.nav-pills > li > a.active {
+  background-color: #9E8DE3 !important;
+  color: white;
+}
+
+.ccb_preview .selectize-input.items.has-options.full.has-items {
+  background-color: #9e8de3;
+  border-color: #9e8de3;
+  border-radius: 0;
+  color: white;
+}
+
+/*
+Remove margins in dropdowns 
+.ccb_preview .selectize-control {
+  margin-bottom: 0 !important;
+}
+
+Change dropdown arrow icon color to white 
+.ccb_preview .selectize-control.single .selectize-input:after {
+  border-color: white transparent transparent transparent !important;
+}
+
+Dropdown when open: Remove border radius
+.ccb_preview .selectize-dropdown {
+  border-radius: 0;
+}
+
+*/
+
+
+/* Below ensures the dropdowns go over the plot -------------------------------------- */
+
+/*
+
+.ccb_preview .col-sm-9 .bslib-gap-spacing.html-fill-container {
+  overflow: visible;
+}
+
+.shiny-input-container {
+  z-index: 1001;  Ensure dropdowns appear above the plot 
+  overflow: visible;  Ensure content is not clipped 
+  
+}
+
+.leaflet-container {
+  z-index: 1000; Ensure Leaflet map is behind dropdowns 
+}
+
+*/
+
+/* Menu Information ----------------------------------------------------------------------- */
+.geography-section {
+      background-color: #fff;
+      padding: 20px 0 20px 10px;
+  
+}
+
+.section-header {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 10px;
+      position: relative;
+}
+
+.geography-list {
+      list-style: none;
+      padding: 0;
+}    
+
+.geography-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+}    
+
+.checkmark {
+      margin-right: 10px;
+      color: #4CAF50; /* Green color for checkmarks */
+}
+
+.highlighted-text { 
+  display: flex; 
+  flex-direction: row; 
+  width: -webkit-fill-available;
+  font-weight: bold;
+}
+
+.highlighted-text:after {
+     content: "";
+     flex: 1 1;
+     border-bottom: 2px solid #7157db;
+     margin: auto auto auto 5px;
+}
+
+/* Buttons - News & Updates; Newsletter Subscription ---------------------------------- */
+
+.ccb_preview .bttn-material {
+  background: #9E8DE3;
+}
+
+
+/* End of hero image section ============================================================================================================================== */
+
+/* Homepage - Section Styling ------------------------------ */
+
+.section-container {
+  text-align: center;
+  --color1: #456032;
+  --color2: #000;
+  padding: 0 20px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  font-size:50px;
+  color: var(--color1);
+  background:linear-gradient(to right, var(--color1) 50%, var(--color2) 50%) bottom,
+    linear-gradient(to right, var(--color2) 50%, var(--color1) 50%) top;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  padding: 5px 0;
+  max-width: 50vw;
+}
+
+
+/* Homepage - CCB Info ----------------------------------------------------------------- */
+
+.info-row .card {
+  border-radius: 0;
+  border: 2px solid #292929;
+  box-shadow: 0 0 10px rgb(68 68 68);
+  transition: box-shadow 0.3s ease-in-out;
+  width: 50vw;
+  max-height: 50vh;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+
+.info-row .card-header {
+  border-bottom: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.info-row .nav-pills {
+    --bs-nav-pills-border-radius: unset;
+    --bs-nav-pills-link-active-color: #fff;
+    --bs-nav-link-color: #000;
+    --bs-nav-link-hover-color: #fff;
+    --bs-nav-link-hover-background-color: #9E8DE3;
+    --bs-nav-pills-link-active-bg: #9E8DE3;
+    background: linear-gradient(to right, #e5e1d9, #e5e1d9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 100%;
+    margin-bottom: 0;
+    transition: width 0.5s;
+}
+
+.info-row .nav-pills > li > a {
+    padding: 15px;
+    transition: background-color 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.info-row .nav-pills > li > a:last-child {
+  border-bottom: none; /* Ensures no border is added to the bottom of the last item in the menu */
+}
+
+.info-row .nav-pills > li > a:hover {
+  background-color: #9E8DE3;
+  color: white;
+}
+
+.info-row .nav-pills > li.active > a {
+  background-color: #9E8DE3;
+  color: white;
+}
+
+
+
+
+/*
+.info-row ul {
+  background: #0F79BF;
+}
+*/
+
+.info-row li {
+  padding: 0 !important;
+  margin-left: 0 !important;
+  width: 25%;
+}
+
+.info-row img {
+  object-fit: cover;
+  flex: 1 1 auto;
+  border-right: 2px solid #292929;
+}
+
+
+
+/* Homepage - Featured Stories =================================================================== */
+
+.featured-row {
+  background: #f2f2f2;
+  padding: 30px 30px;
+}
+
+
+.featured-row .bslib-grid {
+  justify-content: center;
+}
+
+
+.featured-row .bslib-gap-spacing.html-fill-container:hover {
+  box-shadow: 0 8px 16px 0 #6A924C;
+}
+
+.featured-row .card {
+  color: #FFFFFF; 
+  background-color: #6A924C; 
+  box-shadow: 0 4px 8px 0 #6A924C; 
+  transition: 0.1s; 
+}
+
+.featured-row img {
+  object-fit: cover;
+  flex: 1 1 auto;
+  overflow: auto;
+}
