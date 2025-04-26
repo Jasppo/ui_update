@@ -1,0 +1,26 @@
+project:
+  type: book
+
+book:
+  title: "CCB App Documentation"
+  author: "Jaspreet Kang, Shuo Chen, Michael Samuel"
+  date: "4/1/2025"
+  chapters:
+    - index.qmd
+    - 01-overview.qmd
+    - 02-ui-structure.qmd
+    - server-logic.qmd
+    - global-setup.qmd
+    - inputs-and-outputs.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

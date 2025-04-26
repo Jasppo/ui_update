@@ -1,0 +1,214 @@
+/* CCB Preview  --------------------------------------------------------------------------------------------------------------- */
+
+/* Responsive width for navset_card_pill container ------------------------------ */
+
+.ccb_preview {
+  border: 2px solid #222222;
+  width: 100vw;
+  max-width: 90vw;
+  background: white;
+  border-radius: 0;
+  margin-bottom: 5vh;
+}
+
+/* XS ------------------------------ */
+
+@media (min-width: 576px) {
+  .ccb_preview {
+    max-width: 95vw;
+  }
+}
+
+/* S ------------------------------ */
+
+@media (min-width: 768px) {
+  .ccb_preview {
+    max-width: 90vw;
+  }
+}
+
+/* M ------------------------------ */
+
+@media (min-width: 992px) {
+  .ccb_preview {
+    max-width: 80vw;
+  }
+}
+
+/* L ------------------------------ */
+
+@media (min-width: 1200px) {
+  .ccb_preview {
+    max-width: 75vw;
+  }
+}
+
+/* XL ------------------------------ */
+
+@media (min-width: 1400px) {
+  .ccb_preview {
+    max-width: 60vw;
+  }
+}
+
+/* Removes padding in the body of the card */
+.ccb_preview > .card-body {
+  padding: 0;
+}
+
+/* By default bs_gutter_x is set to 1.5 rem, which caused overflow of content hence scrollbar. This fixes that */ 
+.ccb_preview .card-body .row {
+    --bs-gutter-x: 0;
+}
+
+/* Card Header ----------------------------------------------- */
+.ccb_preview .card-header {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: #40327b;
+}
+
+/* Vertical Menu ----------------------------------------------- */
+
+ul#anatomy_menu_input.nav-pills {
+    --bs-nav-pills-border-radius: unset;
+    --bs-nav-pills-link-active-color: #fff;
+    --bs-nav-link-color: #000;
+    --bs-nav-link-hover-color: #fff;
+    background: linear-gradient(to right, #e5e1d9, #e5e1d9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 100%;
+    transition: width 0.5s;
+}
+
+ul#anatomy_menu_input.nav-pills > li > a {
+    padding: 15px;
+    transition: background-color 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+ul#anatomy_menu_input.nav-pills > li > a:last-child {
+  border-bottom: none; /* Ensures no border is added to the bottom of the last item in the menu */
+}
+
+ul#anatomy_menu_input.nav-pills > li > a:hover {
+  background-color: #9E8DE3;
+  color: white;
+}
+
+ul#anatomy_menu_input.nav-pills > li > a.active {
+  background-color: #9E8DE3 !important;
+  color: white;
+}
+
+.ccb_preview .selectize-input.items.has-options.full.has-items {
+  background-color: #9e8de3;
+  border-color: #9e8de3;
+  border-radius: 0;
+  color: white;
+}
+
+/*
+Remove margins in dropdowns 
+.ccb_preview .selectize-control {
+  margin-bottom: 0 !important;
+}
+
+Change dropdown arrow icon color to white 
+.ccb_preview .selectize-control.single .selectize-input:after {
+  border-color: white transparent transparent transparent !important;
+}
+
+Dropdown when open: Remove border radius
+.ccb_preview .selectize-dropdown {
+  border-radius: 0;
+}
+
+*/
+
+
+/* Below ensures the dropdowns go over the plot -------------------------------------- */
+
+/*
+
+.ccb_preview .col-sm-9 .bslib-gap-spacing.html-fill-container {
+  overflow: visible;
+}
+
+.shiny-input-container {
+  z-index: 1001;  Ensure dropdowns appear above the plot 
+  overflow: visible;  Ensure content is not clipped 
+  
+}
+
+.leaflet-container {
+  z-index: 1000; Ensure Leaflet map is behind dropdowns 
+}
+
+*/
+
+/* Menu Information ----------------------------------------------------------------------- */
+.geography-section {
+      background-color: #fff;
+      padding: 20px 0 20px 10px;
+  
+}
+
+.section-header {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 10px;
+      position: relative;
+}
+
+.geography-list {
+      list-style: none;
+      padding: 0;
+}    
+
+.geography-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+}    
+
+.checkmark {
+      margin-right: 10px;
+      color: #4CAF50; /* Green color for checkmarks */
+}
+
+.highlighted-text { 
+  display: flex; 
+  flex-direction: row; 
+  width: -webkit-fill-available;
+  font-weight: bold;
+}
+
+.highlighted-text:after {
+     content: "";
+     flex: 1 1;
+     border-bottom: 2px solid #7157db;
+     margin: auto auto auto 5px;
+}
+
+
+/* Plot preview column ------------------------------- */
+
+/* There are margins and padding between the dropdowns and plot. The two css rules below eliminates those */
+#plot_preview_row .bslib-grid.bslib-mb-spacing.html-fill-item {
+  margin-bottom: 0;
+}
+
+#plot_preview_row .selectize-control {
+  margin-bottom: 0;
+}
+
+
+
+/* Buttons - News & Updates; Newsletter Subscription ---------------------------------- */
+
+.ccb_preview .bttn-material {
+  background: #9E8DE3;
+}

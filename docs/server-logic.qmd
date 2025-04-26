@@ -1,0 +1,83 @@
+---
+execute: 
+  eval: false
+---
+
+# Server Logic
+
+This section describes the server-side logic and reactive architecture for the application, defined in `server.R`.
+
+## Reactive Input Tracking
+
+The app tracks shared/global input state using a `reactiveValues()` object called `r_global_inputs`, allowing selected values like `myCAUSE`, `myLHJ`, `myMeasure`, and `mySex` to persist across tabs.
+
+```{r}
+observeEvent(input$myCAUSE, { r_global_inputs$myCAUSE <- input$myCAUSE })
+```
+
+Additionally, current navigation state is stored using:
+
+```{r}
+currentTab <- reactiveValues(nav = NULL, tab = NULL)
+```
+
+This is updated whenever the user navigates to a new main tab or sub-tab.
+
+## Dynamic Input Visibility
+
+The app shows or hides shared global inputs based on the current tab using:
+
+```{r}
+observe({
+  if (currentTab$nav %in% c("home", "about")) {
+    hideAllInputs()
+  } else {
+    updateInputsOnTabId(currentTab$tab)
+  }
+})
+```
+
+## URL State Management
+
+The app dynamically updates the browser URL to reflect current inputs using:
+
+-   `active_tab_inputs()`: Collects relevant global and module-local input values
+
+-   `observe()`: Reacts to changes and uses `updateQueryString()` to update the URL
+
+Example result:
+
+```{r}
+?tab=mapsTab&myLHJ=CALIFORNIA&myMeasure=aRate&mapsTab-myYear=2021
+```
+
+This enables shareable links and bookmarking.
+
+## URL Restoration on Load
+
+When the app loads, it checks for a valid `tab=` parameter and restores:
+
+-   The main and sub-tab (`updateNavlistPanel`)
+
+-   Any global inputs passed in the query string (e.g. `myLHJ`, `myMeasure`, etc.)
+
+## Calling Module Servers
+
+Each server-side Shiny module is initialized by passing in the module ID and global reactive inputs. For example:
+
+```{r}
+maps_server("mapsTab", r_global_inputs, urlParams = parseURL())
+```
+
+## Tab Information Modal
+
+When the user clicks the "Show Tab Information" button, the app displays a modal dialog with relevant notes from `appText$tabInfo` based on the current sub-tab.
+
+```{r}
+observeEvent(input$myTabInformation, {
+  tabInfo <- appText$tabInfo %>% filter(subTabID == currentTab$tab) %>% pull(Text)
+  showModal(modalDialog(...))
+})
+```
+
+This provides inline help documentation without needing to navigate away.

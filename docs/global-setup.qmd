@@ -1,0 +1,61 @@
+---
+execute: 
+  eval: false
+---
+
+# Global Setup
+
+This section documents the global environment and configuration loaded at app startup, primarily from `global.R` and supporting files in the `Standards/` directory.
+
+## Package Loading
+
+All required packages are loaded at the beginning of `global.R`, grouped by purpose: Shiny components, plotting, data manipulation, reading data, and mapping.
+
+## Standards and Constants
+
+The file `Standards/app_standards.R` is sourced first and defines:
+
+-   `current_years`: named list for year references, including min/max years and grouped periods
+
+-   `constants`: general constants like the name for California (`"CALIFORNIA"`) and version info
+
+-   `links()`: a function that loads lookup tables from Excel and CSV files for race, age, cause of death, counties, education, etc.
+
+-   `choices()`: returns formatted lists for dropdowns — LHJs, causes, and death measures
+
+-   `appText()`: loads display strings (e.g. tooltips, disclaimers) from Word documents using `docxtractr`
+
+-   `plot_colors()`: defines custom color palettes for race, age, gender, and cause types
+
+-   `ggplot_standards()`: sets up ggplot2 theming, line widths, point shapes, and text sizes
+
+These are returned as structured lists: `choices`, `links`, `appText`, `plot_colors`, and `ggplot_standards`, all available globally.
+
+## Lazy Data Loader
+
+A custom function `lazy_load()` is defined to load files **once per session**, storing the result in a `cache` environment. It supports:
+
+-   `.rds`, `.csv`, `.xlsx`, `.rdata`, `.shp`, and `.docx` files
+
+-   Optional sheet selection or table extraction
+
+-   `clear_cache()` helper to wipe the environment when needed
+
+## Inputs and Modules
+
+Global input functions and widgets are sourced from:
+
+```{r}
+source("myFunctions/inputs/input_widgets.R")
+source("myFunctions/inputs/input_functions.R")
+```
+
+All plotting functions are sourced from `myFunctions/` including maps, ranks, trends, disparities, life expectancy, and demographics.
+
+Modules are loaded by sourcing all `.R` files in the `myFunctions/modules/` folder:
+
+```{r}
+lapply(list.files("myFunctions/modules/", pattern = "\\.R$", full.names = TRUE), source)
+```
+
+This architecture ensures that all helper functions, shared resources, and modules are available before the UI and server launch.

@@ -1,0 +1,287 @@
+causeCode,causeName,causeNameShort,topLevName,birth
+o3000,COVID-19,COVID-19,Communicable,FALSE
+oooo1,Tuberculosis,Tuberculosis,Communicable,FALSE
+oooo2,Septicemia (except in labor),Septicemia,Communicable,FALSE
+oooo3,Bacterial infection; unspecified site,Bacterial infection; unspecified site,Communicable,FALSE
+oooo4,Mycoses,Mycoses,Communicable,FALSE
+oooo5,HIV infection,HIV infection,Communicable,FALSE
+oooo6,Hepatitis,Hepatitis,Communicable,FALSE
+oooo7,Viral infection,Viral infection,Communicable,FALSE
+oooo8,Other infections; including parasitic,Other infections; including parasitic,Communicable,FALSE
+oooo9,Sexually transmitted infections (not HIV or hepatitis),STD,Communicable,FALSE
+ooo10,Immunizations and screening for infectious disease,Immunizations and screening for infectious disease,Communicable,FALSE
+ooo11,Cancer of head and neck,Cancer of head and neck,Cancer,FALSE
+ooo12,Cancer of esophagus,Cancer of esophagus,Cancer,FALSE
+ooo13,Cancer of stomach,Cancer of stomach,Cancer,FALSE
+ooo14,Cancer of colon,Cancer of colon,Cancer,FALSE
+ooo15,Cancer of rectum and anus,Cancer of rectum and anus,Cancer,FALSE
+ooo16,Cancer of liver and intrahepatic bile duct,Cancer of liver and intrahepatic bile duct,Cancer,FALSE
+ooo17,Cancer of pancreas,Cancer of pancreas,Cancer,FALSE
+ooo18,Cancer of other GI organs; peritoneum,Cancer of other GI organs; peritoneum,Cancer,FALSE
+ooo19,Cancer of bronchus; lung,Cancer of bronchus; lung,Cancer,FALSE
+ooo20,Cancer; other respiratory and intrathoracic,Cancer; other respiratory and intrathoracic,Cancer,FALSE
+ooo21,Cancer of bone and connective tissue,Cancer of bone and connective tissue,Cancer,FALSE
+ooo22,Melanomas of skin,Melanomas of skin,Cancer,FALSE
+ooo23,Other non-epithelial cancer of skin,Other non-epithelial cancer of skin,Cancer,FALSE
+ooo24,Cancer of breast,Cancer of breast,Cancer,FALSE
+ooo25,Cancer of uterus,Cancer of uterus,Cancer,FALSE
+ooo26,Cancer of cervix,Cancer of cervix,Cancer,FALSE
+ooo27,Cancer of ovary,Cancer of ovary,Cancer,FALSE
+ooo28,Cancer of other female genital organs,Cancer of other female genital organs,Cancer,FALSE
+ooo29,Cancer of prostate,Cancer of prostate,Cancer,FALSE
+ooo30,Cancer of testis,Cancer of testis,Cancer,FALSE
+ooo31,Cancer of other male genital organs,Cancer of other male genital organs,Cancer,FALSE
+ooo32,Cancer of bladder,Cancer of bladder,Cancer,FALSE
+ooo33,Cancer of kidney and renal pelvis,Cancer of kidney and renal pelvis,Cancer,FALSE
+ooo34,Cancer of other urinary organs,Cancer of other urinary organs,Cancer,FALSE
+ooo35,Cancer of brain and nervous system,Cancer of brain and nervous system,Cancer,FALSE
+ooo36,Cancer of thyroid,Cancer of thyroid,Cancer,FALSE
+ooo37,Hodgkin`s disease,Hodgkin`s disease,Cancer,FALSE
+ooo38,Non-Hodgkin`s lymphoma,Non-Hodgkin`s lymphoma,Cancer,FALSE
+ooo39,Leukemias,Leukemias,Cancer,FALSE
+ooo40,Multiple myeloma,Multiple myeloma,Cancer,FALSE
+ooo41,Cancer; other and unspecified primary,Cancer; other and unspecified primary,Cancer,FALSE
+ooo42,Secondary malignancies,Secondary malignancies,Cancer,FALSE
+ooo43,Malignant neoplasm without specification of site,Malignant neoplasm without specification of site,Cancer,FALSE
+ooo44,Neoplasms of unspecified nature or uncertain behavior,Neoplasms of unspecified nature or uncertain behavior,Cancer,FALSE
+ooo45,Maintenance chemotherapy; radiotherapy,Chemotherapy,Cancer,FALSE
+ooo46,Benign neoplasm of uterus,Benign neoplasm of uterus,Cancer,FALSE
+ooo47,Other and unspecified benign neoplasm,Other and unspecified benign neoplasm,Cancer,FALSE
+ooo48,Thyroid disorders,Thyroid disorders,Other Chronic,FALSE
+ooo49,Diabetes mellitus without complication,Diabetes mellitus without complication,Other Chronic,FALSE
+ooo50,Diabetes mellitus with complications,Diabetes mellitus with complications,Other Chronic,FALSE
+ooo51,Other endocrine disorders,Other endocrine disorders,Other Chronic,FALSE
+ooo52,Nutritional deficiencies,Nutritional deficiencies,Other,FALSE
+ooo53,Disorders of lipid metabolism,Disorders of lipid metabolism,Other,FALSE
+ooo54,Gout and other crystal arthropathies,Gout and other crystal arthropathies,Other Chronic,FALSE
+ooo55,Fluid and electrolyte disorders,Fluid and electrolyte disorders,Other,FALSE
+ooo56,Cystic fibrosis,Cystic fibrosis,Other Chronic,FALSE
+ooo57,Immunity disorders,Immunity disorders,Other Chronic,FALSE
+ooo58,Other nutritional; endocrine; and metabolic disorders,Other nutritional; endocrine; and metabolic disorders,Other,FALSE
+ooo59,Deficiency and other anemia,Deficiency and other anemia,Other,FALSE
+ooo60,Acute posthemorrhagic anemia,Acute posthemorrhagic anemia,Other,FALSE
+ooo61,Sickle cell anemia,Sickle cell anemia,Other Chronic,FALSE
+ooo62,Coagulation and hemorrhagic disorders,Coagulation and hemorrhagic disorders,Other Chronic,FALSE
+ooo63,Diseases of white blood cells,Diseases of white blood cells,Other Chronic,FALSE
+ooo64,Other hematologic conditions,Other hematologic conditions,Other Chronic,FALSE
+ooo76,Meningitis (except that caused by tuberculosis or sexually transmitted disease),Meningitis,Communicable,FALSE
+ooo77,Encephalitis (except that caused by tuberculosis or sexually transmitted disease),Encephalitis,Other,FALSE
+ooo78,Other CNS infection and poliomyelitis,Other CNS infection and poliomyelitis,Communicable,FALSE
+ooo79,Parkinson`s disease,Parkinson`s disease,Other Chronic,FALSE
+ooo80,Multiple sclerosis,Multiple sclerosis,Other Chronic,FALSE
+ooo81,Other hereditary and degenerative nervous system conditions,Other hereditary and degenerative nervous system conditions,Other Chronic,FALSE
+ooo82,Paralysis,Paralysis,Other Chronic,FALSE
+ooo83,Epilepsy; convulsions,Epilepsy; convulsions,Other,FALSE
+ooo84,Headache; including migraine,Headache; including migraine,Other,FALSE
+ooo85,Coma; stupor; and brain damage,Coma; stupor; and brain damage,Other Chronic,FALSE
+ooo86,Cataract,Cataract,Other Chronic,FALSE
+ooo87,Retinal detachments; defects; vascular occlusion; and retinopathy,Retinal detachments; defects; vascular occlusion; and retinopathy,Other,FALSE
+ooo88,Glaucoma,Glaucoma,Other Chronic,FALSE
+ooo89,Blindness and vision defects,Blindness and vision defects,Other Chronic,FALSE
+ooo90,Inflammation; infection of eye (except that caused by tuberculosis or sexually transmitteddisease),Inflammation; infection of eye,Communicable,FALSE
+ooo91,Other eye disorders,Other eye disorders,Other,FALSE
+ooo92,Otitis media and related conditions,Otitis media and related conditions,Communicable,FALSE
+ooo93,Conditions associated with dizziness or vertigo,dizziness or vertigo,Other,FALSE
+ooo94,Other ear and sense organ disorders,Other ear and sense organ disorders,Other,FALSE
+ooo95,Other nervous system disorders,Other nervous system disorders,Other Chronic,FALSE
+ooo96,Heart valve disorders,Heart valve disorders,Cardiovascular,FALSE
+ooo97,Peri-; endo-; and myocarditis; cardiomyopathy (except that caused by tuberculosis or sexually transmitted disease),Peri-; endo-; and myocarditis; cardiomyopathy,Cardiovascular,FALSE
+ooo98,Essential hypertension,Essential hypertension,Cardiovascular,FALSE
+ooo99,Hypertension with complications and secondary hypertension,Hypertension with complications,Cardiovascular,FALSE
+oo100,Acute myocardial infarction,Acute myocardial infarction,Cardiovascular,FALSE
+oo101,Coronary atherosclerosis and other heart disease,Coronary atherosclerosis and other heart disease,Cardiovascular,FALSE
+oo102,Nonspecific chest pain,Nonspecific chest pain,Cardiovascular,FALSE
+oo103,Pulmonary heart disease,Pulmonary heart disease,Cardiovascular,FALSE
+oo104,Other and ill-defined heart disease,Other and ill-defined heart disease,Cardiovascular,FALSE
+oo105,Conduction disorders,Conduction disorders,Cardiovascular,FALSE
+oo106,Cardiac dysrhythmias,Cardiac dysrhythmias,Cardiovascular,FALSE
+oo107,Cardiac arrest and ventricular fibrillation,Cardiac arrest and ventricular fibrillation,Cardiovascular,FALSE
+oo108,Congestive heart failure; nonhypertensive,Congestive heart failure; nonhypertensive,Cardiovascular,FALSE
+oo109,Acute cerebrovascular disease,Stroke,Cardiovascular,FALSE
+oo110,Occlusion or stenosis of precerebral arteries,Occlusion or stenosis of precerebral arteries,Cardiovascular,FALSE
+oo111,Other and ill-defined cerebrovascular disease,Other and ill-defined cerebrovascular disease,Cardiovascular,FALSE
+oo112,Transient cerebral ischemia,Transient cerebral ischemia,Cardiovascular,FALSE
+oo113,Late effects of cerebrovascular disease,Late effects of cerebrovascular disease,Cardiovascular,FALSE
+oo114,Peripheral and visceral atherosclerosis,Peripheral and visceral atherosclerosis,Cardiovascular,FALSE
+oo115,Aortic; peripheral; and visceral artery aneurysms,Aortic; peripheral; and visceral artery aneurysms,Cardiovascular,FALSE
+oo116,Aortic and peripheral arterial embolism or thrombosis,Aortic and peripheral arterial embolism or thrombosis,Cardiovascular,FALSE
+oo117,Other circulatory disease,Other circulatory disease,Cardiovascular,FALSE
+oo118,Phlebitis; thrombophlebitis and thromboembolism,Phlebitis; thrombophlebitis and thromboembolism,Cardiovascular,FALSE
+oo119,Varicose veins of lower extremity,Varicose veins of lower extremity,Cardiovascular,FALSE
+oo120,Hemorrhoids,Hemorrhoids,Cardiovascular,FALSE
+oo121,Other diseases of veins and lymphatics,Other diseases of veins and lymphatics,Cardiovascular,FALSE
+oo122,Pneumonia (except that caused by tuberculosis or sexually transmitted disease),Pneumonia,Communicable,FALSE
+oo123,Influenza,Influenza,Communicable,FALSE
+oo124,Acute and chronic tonsillitis,Acute and chronic tonsillitis,Other,FALSE
+oo125,Acute bronchitis,Acute bronchitis,Other,FALSE
+oo126,Other upper respiratory infections,Other upper resp. inf.,Other,FALSE
+oo127,Chronic obstructive pulmonary disease and bronchiectasis,COPD,Other Chronic,FALSE
+oo128,Asthma,Asthma,Other Chronic,FALSE
+oo129,Aspiration pneumonitis; food/vomitus,Aspiration pneumonitis; food/vomitus,Injury,FALSE
+oo130,Pleurisy; pneumothorax; pulmonary collapse,Pleurisy; pneumothorax; pulmonary collapse,Other,FALSE
+oo131,Respiratory failure; insufficiency; arrest (adult),Respiratory failure (adult),Other,FALSE
+oo132,Lung disease due to external agents,Lung disease due to external agents,Other,FALSE
+oo133,Other lower respiratory disease,Other lower respiratory disease,Other,FALSE
+oo134,Other upper respiratory disease,Other upper respiratory disease,Other,FALSE
+oo135,Intestinal infection,Intestinal infection,Communicable,FALSE
+oo136,Disorders of teeth and jaw,Disorders of teeth and jaw,Other Chronic,FALSE
+oo137,Diseases of mouth; excluding dental,Diseases of mouth; excluding dental,Other,FALSE
+oo138,Esophageal disorders,Esophageal disorders,Other Chronic,FALSE
+oo139,Gastroduodenal ulcer (except hemorrhage),Gastroduodenal ulcer (except hemorrhage),Other chronic,FALSE
+oo140,Gastritis and duodenitis,Gastritis and duodenitis,Other,FALSE
+oo141,Other disorders of stomach and duodenum,Other disorders of stomach and duodenum,Other Chronic,FALSE
+oo142,Appendicitis and other appendiceal conditions,Appendicitis,Other,FALSE
+oo143,Abdominal hernia,Abdominal hernia,Other,FALSE
+oo144,Regional enteritis and ulcerative colitis,Regional enteritis and ulcerative colitis,Other Chronic,FALSE
+oo145,Intestinal obstruction without hernia,Intestinal obstruction without hernia,Other,FALSE
+oo146,Diverticulosis and diverticulitis,Diverticulosis and diverticulitis,Other,FALSE
+oo147,Anal and rectal conditions,Anal and rectal conditions,Other,FALSE
+oo148,Peritonitis and intestinal abscess,Peritonitis and intestinal abscess,Other,FALSE
+oo149,Biliary tract disease,Biliary tract disease,Other,FALSE
+oo150,Liver disease; alcohol-related,Liver disease; alcohol-related,NA,NA
+oo151,Other liver diseases,Other liver diseases,Other Chronic,FALSE
+oo152,Pancreatic disorders (not diabetes),Pancreatic disorders (not diabetes),Other Chronic,FALSE
+oo153,Gastrointestinal hemorrhage,Gastrointestinal hemorrhage,Other,FALSE
+oo154,Noninfectious gastroenteritis,Noninfectious gastroenteritis,Other,FALSE
+oo155,Other gastrointestinal disorders,Other gastro. disorders,Other Chronic,FALSE
+oo156,Nephritis; nephrosis; renal sclerosis,Nephritis; nephrosis; renal sclerosis,Other Chronic,FALSE
+oo157,Acute and unspecified renal failure,Acute renal failure,Other,FALSE
+oo158,Chronic kidney disease,Chronic kidney disease,Other Chronic,FALSE
+oo159,Urinary tract infections,Urinary tract infections,Communicable,FALSE
+oo160,Calculus of urinary tract,Calculus of urinary tract,Other,FALSE
+oo161,Other diseases of kidney and ureters,Other diseases of kidney and ureters,Other,FALSE
+oo162,Other diseases of bladder and urethra,Other diseases of bladder and urethra,Other,FALSE
+oo163,Genitourinary symptoms and ill-defined conditions,Genitourinary symptoms and ill-defined conditions,Other,FALSE
+oo164,Hyperplasia of prostate,Hyperplasia of prostate,Other Chronic,FALSE
+oo165,Inflammatory conditions of male genital organs,Inflammatory conditions of male genital organs,Other,FALSE
+oo166,Other male genital disorders,Other male genital disorders,Other,FALSE
+oo167,Nonmalignant breast conditions,Nonmalignant breast conditions,Other Chronic,FALSE
+oo168,Inflammatory diseases of female pelvic organs,Inflammatory diseases of female pelvic organs,Other,FALSE
+oo169,Endometriosis,Endometriosis,Other Chronic,FALSE
+oo170,Prolapse of female genital organs,Prolapse of female genital organs,Other Chronic,FALSE
+oo171,Menstrual disorders,Menstrual disorders,Other Chronic,FALSE
+oo172,Ovarian cyst,Ovarian cyst,Other Chronic,FALSE
+oo173,Menopausal disorders,Menopausal disorders,Other Chronic,FALSE
+oo174,Female infertility,Female infertility,Other Chronic,FALSE
+oo175,Other female genital disorders,Other female genital disorders,Other,FALSE
+oo176,Contraceptive and procreative management,Contraceptive and procreative management,Perinatal,TRUE
+oo177,Spontaneous abortion,Spontaneous abortion,Perinatal,TRUE
+oo178,Induced abortion,Induced abortion,Perinatal,TRUE
+oo179,Postabortion complications,Postabortion complications,Perinatal,TRUE
+oo180,Ectopic pregnancy,Ectopic pregnancy,Perinatal,TRUE
+oo181,Other complications of pregnancy,Other complications of pregnancy,Perinatal,TRUE
+oo182,Hemorrhage during pregnancy; abruptio placenta; placenta previa,Hemorrhage during pregnancy; abruptio placenta; placenta previa,Perinatal,TRUE
+oo183,Hypertension complicating pregnancy; childbirth and the puerperium,Hypertension; pregnancy,Perinatal,TRUE
+oo184,Early or threatened labor,Early or threatened labor,Perinatal,TRUE
+oo185,Prolonged pregnancy,Prolonged pregnancy,Perinatal,TRUE
+oo186,Diabetes or abnormal glucose tolerance complicating pregnancy; childbirth; or the puerperium,Diabetes or abnormal glucose tolerance complicating pregnancy; childbirth; or the puerperium,Perinatal,TRUE
+oo187,Malposition; malpresentation,Malposition; malpresentation,Perinatal,TRUE
+oo188,Fetopelvic disproportion; obstruction,Fetopelvic disproportion; obstruction,Perinatal,TRUE
+oo189,Previous C-section,Previous C-section,Perinatal,TRUE
+oo190,Fetal distress and abnormal forces of labor,Fetal distress and abnormal forces of labor,Perinatal,TRUE
+oo191,Polyhydramnios and other problems of amniotic cavity,Polyhydramnios,Perinatal,TRUE
+oo192,Umbilical cord complication,Umbilical cord complication,Perinatal,TRUE
+oo193,OB-related trauma to perineum and vulva,OB-related trauma,Perinatal,TRUE
+oo194,Forceps delivery,Forceps delivery,Perinatal,TRUE
+oo195,Other complications of birth; puerperium affecting management of mother,Other complications of birth,Perinatal,TRUE
+oo196,Other pregnancy and delivery including normal,Other pregnancy and delivery including normal,Perinatal,TRUE
+oo197,Skin and subcutaneous tissue infections,Skin infections,Communicable,FALSE
+oo198,Other inflammatory condition of skin,Other inflammatory condition of skin,Other,FALSE
+oo199,Chronic ulcer of skin,Chronic ulcer of skin,Other Chronic,FALSE
+oo200,Other skin disorders,Other skin disorders,Other,FALSE
+oo201,Infective arthritis and osteomyelitis (except that caused by tuberculosis or sexually transmitted disease),Infective arthritis and osteomyelitis (except that caused by tuberculosis or sexually transmitted disease),Communicable,FALSE
+oo202,Rheumatoid arthritis and related disease,Rheumatoid arthritis and related disease,Other Chronic,FALSE
+oo203,Osteoarthritis,Osteoarthritis,Other Chronic,FALSE
+oo204,Other non-traumatic joint disorders,Other non-traumatic joint disorders,Other Chronic,FALSE
+oo205,Spondylosis; intervertebral disc disorders; other back problems,Spondylosis / other back problems,Other Chronic,FALSE
+oo206,Osteoporosis,Osteoporosis,Other Chronic,FALSE
+oo207,Pathological fracture,Pathological fracture,Communicable,FALSE
+oo208,Acquired foot deformities,Acquired foot deformities,Other Chronic,FALSE
+oo209,Other acquired deformities,Other acquired deformities,Other Chronic,FALSE
+oo210,Systemic lupus erythematosus and connective tissue disorders,Systemic lupus erythematosus and connective tissue disorders,Other Chronic,FALSE
+oo211,Other connective tissue disease,Other connective tissue disease,Other Chronic,FALSE
+oo212,Other bone disease and musculoskeletal deformities,Other bone disease and musculoskeletal deformities,Other Chronic,FALSE
+oo213,Cardiac and circulatory congenital anomalies,Cardiac congenital anomalies,Cardiovascular,FALSE
+oo214,Digestive congenital anomalies,Digestive congenital anomalies,Other Chronic,FALSE
+oo215,Genitourinary congenital anomalies,Genitourinary congenital anomalies,Other Chronic,FALSE
+oo216,Nervous system congenital anomalies,Nervous system congenital anomalies,Other Chronic,FALSE
+oo217,Other congenital anomalies,Other congenital anomalies,Other Chronic,FALSE
+oo218,Liveborn,Liveborn,Perinatal,TRUE
+oo219,Short gestation; low birth weight; and fetal growth retardation,Short gestation; low birth weight; and fetal growth retardation,Perinatal,TRUE
+oo220,Intrauterine hypoxia and birth asphyxia,Intrauterine hypoxia and birth asphyxia,Perinatal,TRUE
+oo221,Respiratory distress syndrome,Respiratory distress syndrome,Perinatal,TRUE
+oo222,Hemolytic jaundice and perinatal jaundice,Hemolytic/perinatal jaundice,Perinatal,TRUE
+oo223,Birth trauma,Birth trauma,Perinatal,TRUE
+oo224,Other perinatal conditions,Other perinatal conditions,Perinatal,TRUE
+oo225,Joint disorders and dislocations; trauma-related,Joint disorders and dislocations; trauma-related,Injury,FALSE
+oo226,Fracture of neck of femur (hip),Fracture of neck of femur (hip),Injury,FALSE
+oo227,Spinal cord injury,Spinal cord injury,Injury,FALSE
+oo228,Skull and face fractures,Skull and face fractures,Injury,FALSE
+oo229,Fracture of upper limb,Fracture of upper limb,Injury,FALSE
+oo230,Fracture of lower limb,Fracture of lower limb,Injury,FALSE
+oo231,Other fractures,Other fractures,Injury,FALSE
+oo232,Sprains and strains,Sprains and strains,Injury,FALSE
+oo233,Intracranial injury,Intracranial injury,Injury,FALSE
+oo234,Crushing injury or internal injury,Crushing injury or internal injury,Injury,FALSE
+oo235,Open wounds of head; neck; and trunk,Open wounds head & trunk,Injury,FALSE
+oo236,Open wounds of extremities,Open wounds of extremities,Injury,FALSE
+oo237,Complication of device; implant or graft,Complication device / implant / graft,Injury,FALSE
+oo238,Complications of surgical procedures or medical care,Complications of surgery,Injury,FALSE
+oo239,Superficial injury; contusion,Superficial injury; contusion,Injury,FALSE
+oo240,Burns,Burns,Injury,FALSE
+oo241,Poisoning by psychotropic agents,Poisoning by psychotropic agents,Injury,FALSE
+oo242,Poisoning by other medications and drugs,Poisoning by other medications and drugs,Injury,FALSE
+oo243,Poisoning by nonmedicinal substances,Poisoning by nonmedicinal substances,Injury,FALSE
+oo244,Other injuries and conditions due to external causes,Other injuries,Injury,FALSE
+oo245,Syncope,Syncope,Other,FALSE
+oo246,Fever of unknown origin,Fever of unknown origin,Other,FALSE
+oo247,Lymphadenitis,Lymphadenitis,Other,FALSE
+oo248,Gangrene,Gangrene,Other,FALSE
+oo249,Shock,Shock,Other,FALSE
+oo250,Nausea and vomiting,Nausea and vomiting,Other,FALSE
+oo251,Abdominal pain,Abdominal pain,Other,FALSE
+oo252,Malaise and fatigue,Malaise and fatigue,Other,FALSE
+oo253,Allergic reactions,Allergic reactions,Other,FALSE
+oo254,Rehabilitation care; fitting of prostheses; and adjustment of devices,Rehabilitation care; fitting of prostheses; and adjustment of devices,Other,FALSE
+oo255,Administrative/social admission,Administrative/social admission,Other,FALSE
+oo256,Medical examination/evaluation,Medical examination/evaluation,Other,FALSE
+oo257,Other aftercare,Other aftercare,Other,FALSE
+oo258,Other screening for suspected conditions (not mental disorders or infectious disease),Other screening for suspected conditions (not mental disorders or infectious disease),Other,FALSE
+oo259,Residual codes; unclassified,Residual codes; unclassified,Other,FALSE
+oo260,E Codes: All (external causes of injury and poisoning),E Codes: All (external causes of injury and poisoning),NA,NA
+oo650,Adjustment disorders,Adjustment disorders,Other Chronic,FALSE
+oo651,Anxiety disorders,Anxiety disorders,Other Chronic,FALSE
+oo652,Attention-deficit conduct and disruptive behavior disorders,Attention-deficit conduct and disruptive behavior disorders,Other Chronic,FALSE
+oo653,Delirium dementia and amnestic and other cognitive disorders,Delirium dementia and amnestic and other cognitive disorders,Other Chronic,FALSE
+oo654,Developmental disorders,Developmental disorders,Other Chronic,FALSE
+oo655,Disorders usually diagnosed in infancy childhood or adolescence,Disorders usually diagnosed in infancy childhood or adolescence,Other Chronic,FALSE
+oo656,Impulse control disorders NEC,Impulse control disorders NEC,Other Chronic,FALSE
+oo657,Mood disorders,Mood disorders,Other Chronic,FALSE
+oo658,Personality disorders,Personality disorders,Other Chronic,FALSE
+oo659,Schizophrenia and other psychotic disorders,Schizophrenia,Other Chronic,FALSE
+oo660,Alcohol-related disorders,Alcohol-related disorders,Injury,FALSE
+oo661,Substance-related disorders,Substance-related disorders,Injury,FALSE
+oo662,Suicide and intentional self-inflicted injury,Suicide and intentional self-inflicted injury,Injury,FALSE
+oo663,Screening and history of mental health and substance abuse codes,Screening and history of mental health and substance abuse codes,Other Chronic,FALSE
+oo670,Miscellaneous mental health disorders,Miscellaneous mental health disorders,Other Chronic,FALSE
+o2601,External cause codes:  Cut/pierce,External cause codes:  Cut/pierce,Injury,FALSE
+o2602,External cause codes:  Drowning/submersion,External cause codes:  Drowning/submersion,Injury,FALSE
+o2603,External cause codes:  Fall,External cause codes:  Fall,Injury,FALSE
+o2604,External cause codes:  Fire/burn,External cause codes:  Fire/burn,Injury,FALSE
+o2605,External cause codes:  Firearm,External cause codes:  Firearm,Injury,FALSE
+o2606,External cause codes:  Machinery,External cause codes:  Machinery,Injury,FALSE
+o2607,External cause codes:  Motor vehicle traffic (MVT),External cause codes:  Motor vehicle traffic (MVT),Injury,FALSE
+o2608,External cause codes:  Pedal cyclist; not MVT,External cause codes:  Pedal cyclist; not MVT,Injury,FALSE
+o2609,External cause codes:  Pedestrian; not MVT,External cause codes:  Pedestrian; not MVT,Injury,FALSE
+o2610,External cause codes:  Transport; not MVT,External cause codes:  Transport; not MVT,Injury,FALSE
+o2611,External cause codes:  Natural/environment,External cause codes:  Natural/environment,Injury,FALSE
+o2612,External cause codes:  Overexertion,External cause codes:  Overexertion,Injury,FALSE
+o2613,External cause codes:  Poisoning,External cause codes:  Poisoning,Injury,FALSE
+o2614,External cause codes:  Struck by; against,External cause codes:  Struck by; against,Injury,FALSE
+o2615,External cause codes:  Suffocation,External cause codes:  Suffocation,Injury,FALSE
+o2616,Adverse effects of medical care,Adverse effects of medical care,Injury,FALSE
+o2617,Adverse effects of medical drugs,Adverse effects of medical drugs,Injury,FALSE
+o2618,External cause codes:  Other specified and classifiable,External cause codes:  Other specified and classifiable,Injury,FALSE
+o2619,External cause codes:  Other specified; NEC,External cause codes:  Other specified; NEC,Injury,FALSE
+o2620,External cause codes:  Unspecified,External cause codes:  Unspecified,Injury,FALSE
+o2621,External cause codes:  Place of occurrence,External cause codes:  Place of occurrence,Injury,FALSE

@@ -1,0 +1,212 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CCB App Documentation",
+    "section": "",
+    "text": "1 Welcome\nWelcome to the technical documentation for the Shiny application. This Quarto book is designed to help developers, analysts, and stakeholders understand the architecture, logic, and components of the app.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#purpose",
+    "href": "index.html#purpose",
+    "title": "CCB App Documentation",
+    "section": "1.1 Purpose",
+    "text": "1.1 Purpose\nThis app is built to [briefly describe purpose here, e.g., “analyze trends in public health data”].",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#who-should-use-this-book",
+    "href": "index.html#who-should-use-this-book",
+    "title": "CCB App Documentation",
+    "section": "1.2 Who Should Use This Book",
+    "text": "1.2 Who Should Use This Book\n\nDevelopers maintaining or extending the app\nAnalysts seeking to understand the data workflow\nQA or DevOps teams deploying the app",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#how-this-book-is-organized",
+    "href": "index.html#how-this-book-is-organized",
+    "title": "CCB App Documentation",
+    "section": "1.3 How This Book Is Organized",
+    "text": "1.3 How This Book Is Organized\nEach chapter of this book corresponds to a key part of the app:\n\nUI Structure: Layout and navigation\nServer Logic: Reactive expressions and workflow\nModules: Description and responsibilities of each Shiny module\nData Sources: External datasets or APIs used\nInputs & Outputs: User inputs and resulting outputs (plots, tables)\nStyling: Custom CSS or JavaScript\nURL Parameters: Deep linking and shareable state\nDeployment: How to deploy and maintain the app\nKnown Issues: Temporary fixes or limitations\nTo-Dos: Planned improvements\n\nNavigate using the floating table of contents or side navigation panel.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "02-ui-structure.html",
+    "href": "02-ui-structure.html",
+    "title": "3  UI Structure",
+    "section": "",
+    "text": "3.1 Global UI Setup\nui &lt;- tagList(\n  shinyjs::useShinyjs(),\n  tags$head(\n    tags$link(rel = \"stylesheet\", type = \"text/css\", href = \"main.css\"),\n    tags$script(src = \"tech-doc-nav.js\")\n  ),\n  page_navbar(\n    theme = bs_theme(...),\n    title = \"CCB\",\n    id = \"navsID\",\n    sidebar = sidebar(...),\n    nav_panel(...), ...\n  )\n)",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>UI Structure</span>"
+    ]
+  },
+  {
+    "objectID": "02-ui-structure.html#sidebar-behavior",
+    "href": "02-ui-structure.html#sidebar-behavior",
+    "title": "3  UI Structure",
+    "section": "3.2 Sidebar Behavior",
+    "text": "3.2 Sidebar Behavior\nThe sidebar contains inputs and outputs grouped by top-level tabs (e.g., home, maps, ranks). It uses conditionalPanel() logic to show/hide module-specific UI based on tab selection.\nGlobal UI inputs (like tabInformation, causeDropdown, lhjDropdown, etc.) are defined in two files:\n\nmyFunctions/inputs/input_widgets.R: contains UI widget definitions and styling (e.g. dottedSelectInput())\nmyFunctions/inputs/input_functions.R: includes reactive value initialization and tab-based input visibility management\n\nThese are referenced via the global_inputs object and are initially hidden using shinyjs::hidden().",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>UI Structure</span>"
+    ]
+  },
+  {
+    "objectID": "02-ui-structure.html#main-tab-layout",
+    "href": "02-ui-structure.html#main-tab-layout",
+    "title": "3  UI Structure",
+    "section": "3.3 Main Tab Layout",
+    "text": "3.3 Main Tab Layout\nEach main tab is wrapped in a nav_panel(), and many include sub-tabs using navset_pill(), each with its own id. For example:\n\nnav_panel(title = strong(\"MAPS\"),\n  value = \"maps\",\n  navset_pill(id = \"mapsID\",\n    nav_panel(\"MAP\", value = \"mapsTab\", maps_ui_body(\"mapsTab\"))\n  )\n)\n\nThis structure enables:\n\nUnique identification of both main tabs and sub-tabs\nDynamic sidebar rendering with input$&lt;navID&gt; and input$&lt;navID&gt;Tab\nEncapsulation of logic via Shiny modules like maps_ui_sidebar() and maps_ui_body()\n\nEach module adheres to a consistent pattern with a *_ui_sidebar() and *_server() naming convention.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>UI Structure</span>"
+    ]
+  },
+  {
+    "objectID": "02-ui-structure.html#notes",
+    "href": "02-ui-structure.html#notes",
+    "title": "3  UI Structure",
+    "section": "3.4 Notes",
+    "text": "3.4 Notes\n\nCustom CSS is loaded from www/main.css\nA custom JavaScript file tech-doc-nav.js is used for link tracking and navigation within the technical documentation tab\nModule-specific sidebars and bodies are fully modularized and named clearly by function",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>UI Structure</span>"
+    ]
+  },
+  {
+    "objectID": "server-logic.html",
+    "href": "server-logic.html",
+    "title": "4  Server Logic",
+    "section": "",
+    "text": "4.1 Reactive Input Tracking\nThe app tracks shared/global input state using a reactiveValues() object called r_global_inputs, allowing selected values like myCAUSE, myLHJ, myMeasure, and mySex to persist across tabs.\nobserveEvent(input$myCAUSE, { r_global_inputs$myCAUSE &lt;- input$myCAUSE })\nAdditionally, current navigation state is stored using:\ncurrentTab &lt;- reactiveValues(nav = NULL, tab = NULL)\nThis is updated whenever the user navigates to a new main tab or sub-tab.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Server Logic</span>"
+    ]
+  },
+  {
+    "objectID": "server-logic.html#dynamic-input-visibility",
+    "href": "server-logic.html#dynamic-input-visibility",
+    "title": "4  Server Logic",
+    "section": "4.2 Dynamic Input Visibility",
+    "text": "4.2 Dynamic Input Visibility\nThe app shows or hides shared global inputs based on the current tab using:\n\nobserve({\n  if (currentTab$nav %in% c(\"home\", \"about\")) {\n    hideAllInputs()\n  } else {\n    updateInputsOnTabId(currentTab$tab)\n  }\n})",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Server Logic</span>"
+    ]
+  },
+  {
+    "objectID": "server-logic.html#url-state-management",
+    "href": "server-logic.html#url-state-management",
+    "title": "4  Server Logic",
+    "section": "4.3 URL State Management",
+    "text": "4.3 URL State Management\nThe app dynamically updates the browser URL to reflect current inputs using:\n\nactive_tab_inputs(): Collects relevant global and module-local input values\nobserve(): Reacts to changes and uses updateQueryString() to update the URL\n\nExample result:\n\n?tab=mapsTab&myLHJ=CALIFORNIA&myMeasure=aRate&mapsTab-myYear=2021\n\nThis enables shareable links and bookmarking.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Server Logic</span>"
+    ]
+  },
+  {
+    "objectID": "server-logic.html#url-restoration-on-load",
+    "href": "server-logic.html#url-restoration-on-load",
+    "title": "4  Server Logic",
+    "section": "4.4 URL Restoration on Load",
+    "text": "4.4 URL Restoration on Load\nWhen the app loads, it checks for a valid tab= parameter and restores:\n\nThe main and sub-tab (updateNavlistPanel)\nAny global inputs passed in the query string (e.g. myLHJ, myMeasure, etc.)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Server Logic</span>"
+    ]
+  },
+  {
+    "objectID": "server-logic.html#calling-module-servers",
+    "href": "server-logic.html#calling-module-servers",
+    "title": "4  Server Logic",
+    "section": "4.5 Calling Module Servers",
+    "text": "4.5 Calling Module Servers\nEach server-side Shiny module is initialized by passing in the module ID and global reactive inputs. For example:\n\nmaps_server(\"mapsTab\", r_global_inputs, urlParams = parseURL())",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Server Logic</span>"
+    ]
+  },
+  {
+    "objectID": "server-logic.html#tab-information-modal",
+    "href": "server-logic.html#tab-information-modal",
+    "title": "4  Server Logic",
+    "section": "4.6 Tab Information Modal",
+    "text": "4.6 Tab Information Modal\nWhen the user clicks the “Show Tab Information” button, the app displays a modal dialog with relevant notes from appText$tabInfo based on the current sub-tab.\n\nobserveEvent(input$myTabInformation, {\n  tabInfo &lt;- appText$tabInfo %&gt;% filter(subTabID == currentTab$tab) %&gt;% pull(Text)\n  showModal(modalDialog(...))\n})\n\nThis provides inline help documentation without needing to navigate away.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Server Logic</span>"
+    ]
+  },
+  {
+    "objectID": "global-setup.html",
+    "href": "global-setup.html",
+    "title": "5  Global Setup",
+    "section": "",
+    "text": "5.1 Package Loading\nAll required packages are loaded at the beginning of global.R, grouped by purpose: Shiny components, plotting, data manipulation, reading data, and mapping.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Global Setup</span>"
+    ]
+  },
+  {
+    "objectID": "global-setup.html#standards-and-constants",
+    "href": "global-setup.html#standards-and-constants",
+    "title": "5  Global Setup",
+    "section": "5.2 Standards and Constants",
+    "text": "5.2 Standards and Constants\nThe file Standards/app_standards.R is sourced first and defines:\n\ncurrent_years: named list for year references, including min/max years and grouped periods\nconstants: general constants like the name for California (\"CALIFORNIA\") and version info\nlinks(): a function that loads lookup tables from Excel and CSV files for race, age, cause of death, counties, education, etc.\nchoices(): returns formatted lists for dropdowns — LHJs, causes, and death measures\nappText(): loads display strings (e.g. tooltips, disclaimers) from Word documents using docxtractr\nplot_colors(): defines custom color palettes for race, age, gender, and cause types\nggplot_standards(): sets up ggplot2 theming, line widths, point shapes, and text sizes\n\nThese are returned as structured lists: choices, links, appText, plot_colors, and ggplot_standards, all available globally.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Global Setup</span>"
+    ]
+  },
+  {
+    "objectID": "global-setup.html#lazy-data-loader",
+    "href": "global-setup.html#lazy-data-loader",
+    "title": "5  Global Setup",
+    "section": "5.3 Lazy Data Loader",
+    "text": "5.3 Lazy Data Loader\nA custom function lazy_load() is defined to load files once per session, storing the result in a cache environment. It supports:\n\n.rds, .csv, .xlsx, .rdata, .shp, and .docx files\nOptional sheet selection or table extraction\nclear_cache() helper to wipe the environment when needed",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Global Setup</span>"
+    ]
+  },
+  {
+    "objectID": "global-setup.html#inputs-and-modules",
+    "href": "global-setup.html#inputs-and-modules",
+    "title": "5  Global Setup",
+    "section": "5.4 Inputs and Modules",
+    "text": "5.4 Inputs and Modules\nGlobal input functions and widgets are sourced from:\n\nsource(\"myFunctions/inputs/input_widgets.R\")\nsource(\"myFunctions/inputs/input_functions.R\")\n\nAll plotting functions are sourced from myFunctions/ including maps, ranks, trends, disparities, life expectancy, and demographics.\nModules are loaded by sourcing all .R files in the myFunctions/modules/ folder:\n\nlapply(list.files(\"myFunctions/modules/\", pattern = \"\\\\.R$\", full.names = TRUE), source)\n\nThis architecture ensures that all helper functions, shared resources, and modules are available before the UI and server launch.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Global Setup</span>"
+    ]
+  },
+  {
+    "objectID": "inputs-and-outputs.html",
+    "href": "inputs-and-outputs.html",
+    "title": "6  Inputs & Outputs",
+    "section": "",
+    "text": "6.1 Global Input Widgets\nDefined in input_widgets.R, these include buttons, dropdowns, and styled custom inputs used across multiple modules. They are organized in a named list called global_inputs.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inputs & Outputs</span>"
+    ]
+  },
+  {
+    "objectID": "inputs-and-outputs.html#global-input-widgets",
+    "href": "inputs-and-outputs.html#global-input-widgets",
+    "title": "6  Inputs & Outputs",
+    "section": "",
+    "text": "6.1.1 Notable Elements:\n\ndottedSelectInput(): A custom wrapper around selectizeInput() allowing for indented, hierarchical dropdown choices styled with CSS\ninputStyles: A list of inline CSS strings used for small help buttons\n\n\n\n6.1.2 Inputs Included:\n\nmyTabInformation: action button for displaying contextual info\nmyCAUSE: custom hierarchical select input for causes of death\nmyLHJ: dropdown for County/State selection\nmyMeasure: measure dropdown with help button\nmySex: radio buttons for selecting sex group\nmyDataDownload, myChartDownload: download buttons\nsuppressionNote: static text note about data suppression",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inputs & Outputs</span>"
+    ]
+  },
+  {
+    "objectID": "inputs-and-outputs.html#global-input-state-logic",
+    "href": "inputs-and-outputs.html#global-input-state-logic",
+    "title": "6  Inputs & Outputs",
+    "section": "6.2 Global Input State & Logic",
+    "text": "6.2 Global Input State & Logic\nDefined in input_functions.R:\n\n6.2.1 r_global_inputs\nA reactiveValues() object that stores input defaults and toggles visibility:\n\nr_global_inputs &lt;- reactiveValues(\n  myTabInformation = TRUE,\n  myLHJ = constants$STATE,\n  myCAUSE = \"0\",\n  myMeasure = \"aRate\",\n  mySex = \"Total\",\n  suppressionNote = TRUE,\n  myDataDownload = TRUE,\n  myChartDownload = TRUE\n)\n\n\n\n6.2.2 TAB_INPUTS\nA named list that defines which global inputs should be shown per tab ID (e.g., mapsTab, demoTrendTab). Used to conditionally show/hide UI.\n\n\n6.2.3 Helper Functions:\n\nhideAllInputs(): hides all inputs in r_global_inputs\nupdateInputsOnTabId(tabID): hides all, then shows inputs defined for the given tab\ndownload(...): returns a downloadHandler() for data and chart export, customizable per module\n\nThese files allow for a consistent UI/UX across the app while centralizing logic and style control for maintainability.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inputs & Outputs</span>"
+    ]
+  }
+]

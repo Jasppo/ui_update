@@ -1,0 +1,41 @@
+# Welcome
+
+Welcome to the technical documentation for the Shiny application. This Quarto book is designed to help developers, analysts, and stakeholders understand the architecture, logic, and components of the app.
+
+## Purpose
+
+This app is built to \[briefly describe purpose here, e.g., "analyze trends in public health data"\].
+
+## Who Should Use This Book
+
+-   Developers maintaining or extending the app
+
+-   Analysts seeking to understand the data workflow
+
+-   QA or DevOps teams deploying the app
+
+## How This Book Is Organized
+
+Each chapter of this book corresponds to a key part of the app:
+
+-   **UI Structure**: Layout and navigation
+
+-   **Server Logic**: Reactive expressions and workflow
+
+-   **Modules**: Description and responsibilities of each Shiny module
+
+-   **Data Sources**: External datasets or APIs used
+
+-   **Inputs & Outputs**: User inputs and resulting outputs (plots, tables)
+
+-   **Styling**: Custom CSS or JavaScript
+
+-   **URL Parameters**: Deep linking and shareable state
+
+-   **Deployment**: How to deploy and maintain the app
+
+-   **Known Issues**: Temporary fixes or limitations
+
+-   **To-Dos**: Planned improvements
+
+Navigate using the floating table of contents or side navigation panel.

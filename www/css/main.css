@@ -1,0 +1,405 @@
+/* Navbar ------------------------------------------------------------------ */
+
+/* Navbar background color */
+.navbar.navbar-inverse {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Makes CCB Title in Navbar larger */
+.navbar {
+  --bs-navbar-brand-font-size: 1.7rem;
+}
+
+
+/* Sidebar ----------------------------------------------------------------- */
+
+#sidebar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: all 0.3s ease; /* Smooth animations */
+}
+
+/* Show Tab Information, Download Buttons */
+button#myTabInformation,
+button#copyLink,
+a#myDataDownload,
+a#myChartDownload {
+  background-color: #004c4c;
+  border-color: #004c4c;
+  color: white;
+}
+
+
+
+.tabbable > .nav {
+  margin-bottom: 30px; /* Adds margin below sub navigation list */
+}
+
+
+/* ggplot Dynamic resizing --------------------------------------------------- */
+
+.shiny-plot-output {
+  height: 80vh !important;
+}
+
+.shiny-plot-output > img {
+  height: 100% !important;
+}
+
+
+/* Subtabs style ----------------------------------------------------------- */
+
+.tabbable > ul > li > a.nav-link.active {
+  background-color: #D8DFE5;
+  border-color: #D8DFE5;
+  color: #004c4c;
+}
+
+.tabbable > ul > li > a.nav-link {
+  color: #004c4c;
+}
+
+/* Homepage - Hero image =============================================================================================================================== */
+.hero-wrapper {
+  /* layout */
+  /* height: 96vh; */
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin: -1rem; /* 1rem padding in main panel. Adding this fills out the background color */
+}
+
+.hero-image {
+  /* layout */
+  /* height: 96vh; */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* content styling OPTIONAL*/
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5vh;
+  /* background styling */
+  background-color: #f6f6f6;
+  
+}
+
+/*
+background-image: url("../Images/homepage/heroImage-cut.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+*/
+
+/* Text */
+.hero-text {
+  color: #464646;
+  border-bottom: 3px solid #292929;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+}
+
+.hero-text p {
+  font-size: 2rem;
+}
+
+.card-hover:hover {
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+  transition: all 0.2s ease-in-out;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  color: #004c4c;
+  margin-bottom: 0.5rem;
+}
+
+.card-header-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #004c4c;
+}
+
+.card-subtext {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+
+/* End of hero image section ============================================================================================================================== */
+
+
+/* Homepage - CCB Info ----------------------------------------------------------------- */
+
+.info-row {
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.info-row h1 {
+  font-size: 3rem;
+  color: #464646;
+  border-bottom: 3px solid #292929;
+  text-align: center;
+  padding: 0 100px 5px;
+}
+
+/* Responsive width for navset_card_pill container ------------------------------ */
+
+.info-row .card {
+  margin: 0 auto;
+  width: 100vw;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+/* XS ------------------------------ */
+
+@media (min-width: 576px) {
+  .info-row .card {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+}
+
+/* S ------------------------------ */
+
+@media (min-width: 768px) {
+  .info-row .card {
+    max-width: 85vw;
+    max-height: 85vh;
+  }
+}
+
+/* M ------------------------------ */
+
+@media (min-width: 992px) {
+  .info-row .card {
+    max-width: 75vw;
+    max-height: 75vh;
+  }
+}
+
+/* L ------------------------------ */
+
+@media (min-width: 1200px) {
+  .info-row .card {
+    max-width: 60vw;
+    max-height: 60vh;
+  }
+}
+
+/* XL ------------------------------ */
+
+@media (min-width: 1400px) {
+  .info-row .card {
+    max-width: 50vw;
+    max-height: 50vh;
+  }
+}
+
+/* Center nav tab items in info card */
+.info-row .card-header {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-row img {
+  object-fit: cover;
+  flex: 1 1 auto;
+}
+
+
+/*
+
+.info-row .card {
+  border-radius: 0;
+  border: 2px solid #292929;
+  box-shadow: 0 0 10px rgb(68 68 68);
+  transition: box-shadow 0.3s ease-in-out;
+  width: 50vw;
+  max-height: 50vh;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+
+.info-row .card-header {
+  border-bottom: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.info-row .nav-pills {
+    --bs-nav-pills-border-radius: unset;
+    --bs-nav-pills-link-active-color: #fff;
+    --bs-nav-link-color: #000;
+    --bs-nav-link-hover-color: #fff;
+    --bs-nav-link-hover-background-color: #9E8DE3;
+    --bs-nav-pills-link-active-bg: #9E8DE3;
+    background: linear-gradient(to right, #e5e1d9, #e5e1d9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 100%;
+    margin-bottom: 0;
+    transition: width 0.5s;
+    margin-left: 0; 
+    margin-right: 0; 
+}
+
+.info-row .nav-pills > li > a {
+    padding: 15px;
+    transition: background-color 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.info-row .nav-pills > li > a:last-child {
+  border-bottom: none; 
+}
+
+.info-row .nav-pills > li > a:hover {
+  background-color: #9E8DE3;
+  color: white;
+}
+
+.info-row .nav-pills > li.active > a {
+  background-color: #9E8DE3;
+  color: white;
+}
+
+.info-row li {
+  padding: 0 !important;
+  margin-left: 0 !important;
+  width: 25%;
+}
+
+*/
+
+/* Homepage - Featured Stories =================================================================== */
+
+/* #6A924C */
+
+.featured-row {
+  background: #f6f6f6;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: -1rem;
+  padding: 5vh;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.featured-row h1 {
+  font-size: 3rem;
+  color: #464646;
+  border-bottom: 3px solid #292929;
+  text-align: center;
+  padding: 0 100px 5px;
+}
+
+
+.featured-row .bslib-grid {
+  justify-content: center;
+}
+
+
+.featured-row .bslib-gap-spacing.html-fill-container:hover {
+  box-shadow: 0 8px 16px 0 #8ca48c;
+}
+
+.featured-row .card {
+  color: #FFFFFF; 
+  background-color: #8ca48c; 
+  box-shadow: 0 4px 8px 0 #8ca48c; 
+  transition: 0.1s; 
+}
+
+.featured-row img {
+  object-fit: cover;
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+/* Override default grid column behavior for featured posts */
+.featured-columns {
+  display: grid !important;  /* make sure grid takes precedence */
+  grid-template-columns: repeat(1, 1fr);  /* default: 1 column */
+}
+
+/* ≥768px: 2 columns on tablets/small laptops */
+@media (min-width: 992px) {
+  .featured-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ≥992px: 4 columns on medium+ screens */
+@media (min-width: 1200px) {
+  .featured-columns {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* About tab - Technical Documentation ------------------------------------------------------------------------------ */
+
+/* 1. Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. Make nav sticky & sidebar navigation */
+.tech-doc-nav {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+  padding-left: 0;
+  border-left: 1px solid #efefef;
+}
+
+/* 3. ScrollSpy active styles (see JS tab for activation) */
+.tech-doc-nav li.active > a {
+  color: #333;
+  font-weight: 500;
+}
+
+.tech-doc-nav a {
+  text-decoration: none;
+  display: block;
+  padding: .125rem 0;
+  color: #666;
+  transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+}
+
+.tech-doc-nav a:hover,
+.tech-doc-nav a:focus {
+  color: #ccc;
+}
+
+
+.tech-doc-nav ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tech-doc-nav li {
+  margin-left: 1rem;
+}
+
+section h2 {
+  border-bottom: black solid 2px;
+}
+
+

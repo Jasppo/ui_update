@@ -1,0 +1,67 @@
+---
+execute: 
+  eval: false
+---
+
+# Inputs & Outputs
+
+## Global Input Widgets
+
+Defined in `input_widgets.R`, these include buttons, dropdowns, and styled custom inputs used across multiple modules. They are organized in a named list called `global_inputs`.
+
+### Notable Elements:
+
+-   `dottedSelectInput()`: A custom wrapper around `selectizeInput()` allowing for indented, hierarchical dropdown choices styled with CSS
+
+-   `inputStyles`: A list of inline CSS strings used for small help buttons
+
+### Inputs Included:
+
+-   `myTabInformation`: action button for displaying contextual info
+
+-   `myCAUSE`: custom hierarchical select input for causes of death
+
+-   `myLHJ`: dropdown for County/State selection
+
+-   `myMeasure`: measure dropdown with help button
+
+-   `mySex`: radio buttons for selecting sex group
+
+-   `myDataDownload`, `myChartDownload`: download buttons
+
+-   `suppressionNote`: static text note about data suppression
+
+## Global Input State & Logic
+
+Defined in `input_functions.R`:
+
+### `r_global_inputs`
+
+A `reactiveValues()` object that stores input defaults and toggles visibility:
+
+```{r}
+r_global_inputs <- reactiveValues(
+  myTabInformation = TRUE,
+  myLHJ = constants$STATE,
+  myCAUSE = "0",
+  myMeasure = "aRate",
+  mySex = "Total",
+  suppressionNote = TRUE,
+  myDataDownload = TRUE,
+  myChartDownload = TRUE
+)
+```
+
+### `TAB_INPUTS`
+
+A named list that defines which global inputs should be shown per tab ID (e.g., `mapsTab`, `demoTrendTab`). Used to conditionally show/hide UI.
+
+### Helper Functions:
+
+-   `hideAllInputs()`: hides all inputs in `r_global_inputs`
+
+-   `updateInputsOnTabId(tabID)`: hides all, then shows inputs defined for the given tab
+
+-   `download(...)`: returns a `downloadHandler()` for data and chart export, customizable per module
+
+These files allow for a consistent UI/UX across the app while centralizing logic and style control for maintainability.

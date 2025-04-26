@@ -1,0 +1,70 @@
+---
+execute: 
+  eval: false
+---
+
+# UI Structure
+
+This application uses `bslib::page_navbar()` to organize content across tabs, paired with a sidebar that conditionally displays UI components based on the active page or sub-tab.
+
+## Global UI Setup
+
+```{r}
+ui <- tagList(
+  shinyjs::useShinyjs(),
+  tags$head(
+    tags$link(rel = "stylesheet", type = "text/css", href = "main.css"),
+    tags$script(src = "tech-doc-nav.js")
+  ),
+  page_navbar(
+    theme = bs_theme(...),
+    title = "CCB",
+    id = "navsID",
+    sidebar = sidebar(...),
+    nav_panel(...), ...
+  )
+)
+```
+
+## Sidebar Behavior
+
+The sidebar contains inputs and outputs grouped by top-level tabs (e.g., `home`, `maps`, `ranks`). It uses `conditionalPanel()` logic to show/hide module-specific UI based on tab selection.
+
+Global UI inputs (like `tabInformation`, `causeDropdown`, `lhjDropdown`, etc.) are defined in two files:
+
+-   `myFunctions/inputs/input_widgets.R`: contains UI widget definitions and styling (e.g. `dottedSelectInput()`)
+
+-   `myFunctions/inputs/input_functions.R`: includes reactive value initialization and tab-based input visibility management
+
+These are referenced via the `global_inputs` object and are initially hidden using `shinyjs::hidden()`.
+
+## Main Tab Layout
+
+Each main tab is wrapped in a `nav_panel()`, and many include sub-tabs using `navset_pill()`, each with its own `id`. For example:
+
+```{r}
+nav_panel(title = strong("MAPS"),
+  value = "maps",
+  navset_pill(id = "mapsID",
+    nav_panel("MAP", value = "mapsTab", maps_ui_body("mapsTab"))
+  )
+)
+```
+
+This structure enables:
+
+-   Unique identification of both main tabs and sub-tabs
+
+-   Dynamic sidebar rendering with `input$<navID>` and `input$<navID>Tab`
+
+-   Encapsulation of logic via Shiny modules like `maps_ui_sidebar()` and `maps_ui_body()`
+
+Each module adheres to a consistent pattern with a `*_ui_sidebar()` and `*_server()` naming convention.
+
+## Notes
+
+-   Custom CSS is loaded from `www/main.css`
+
+-   A custom JavaScript file `tech-doc-nav.js` is used for link tracking and navigation within the technical documentation tab
+
+-   Module-specific sidebars and bodies are fully modularized and named clearly by function
